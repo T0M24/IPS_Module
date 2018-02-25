@@ -12,7 +12,7 @@
     "actions":
     [
         { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable(true);" },
-        { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable(false);" }
+        { "type": "Button", "label": "Deactivate", "onClick": "CTRL_SetEnable(false);" }
     ],
     "status":
     [

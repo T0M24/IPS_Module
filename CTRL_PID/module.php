@@ -68,7 +68,7 @@
         * ABC_MeineErsteEigeneFunktion($id);
         *
         */
-        public function CTRL_SetEnable($switch) {
+        public function SetEnable($switch) {
             //schaltet den Regler an oder aus
             SetValue(GetIDForIdent ( "is_active" ),$switch);
             
