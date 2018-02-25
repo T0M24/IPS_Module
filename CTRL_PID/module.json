@@ -1,0 +1,15 @@
+{
+    "id": "{1F249894-CF42-4C6D-8331-8BF3DE0015FE}",
+    "name": "CTRL_PID",
+    "type": 3,
+    "vendor": "",
+    "aliases":
+    [
+        "Name1UnterstütztesGerät",
+        "Name2UnterstütztesGerät"
+    ],  
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "CTRL"
+}
