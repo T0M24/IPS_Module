@@ -55,7 +55,7 @@
             /* eigene Apply Changes
             */
             
-            $this->SetTimerInterval("cycle_poller", ReadPropertyInteger ( "cycletime" ));
+            $this->SetTimerInterval("cycle_poller", $this->ReadPropertyInteger ( "cycletime" ));
             
             
             
@@ -73,7 +73,7 @@
             SetValue(GetIDForIdent ( "is_active" ),$switch);
             
             if ($switch) {
-              $this->SetTimerInterval("cycle_poller", ReadPropertyInteger ( "cycletime" ));
+              $this->SetTimerInterval("cycle_poller", $this->ReadPropertyInteger ( "cycletime" ));
               }
               else {
               $this->SetTimerInterval("cycle_poller", 0);
