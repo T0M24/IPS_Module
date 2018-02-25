@@ -1,9 +1,9 @@
 {
     "elements":
     [
-        { "type": "NumberSpinner", "name": "K_P", "caption": "K_P", "digits": 3},
-        { "type": "NumberSpinner", "name": "K_I", "caption": "K_I", "digits": 3},
-        { "type": "NumberSpinner", "name": "K_D", "caption": "K_D", "digits": 3},
+        { "type": "NumberSpinner", "name": "KP", "caption": "KP", "digits": 3},
+        { "type": "NumberSpinner", "name": "KI", "caption": "KI", "digits": 3},
+        { "type": "NumberSpinner", "name": "KD", "caption": "KD", "digits": 3},
         
         { "type": "HorizontalSlider", "name": "cycle_time", "caption": "CTRL Cycle Time", "minimum": 200, "maximum": 60000 }
 

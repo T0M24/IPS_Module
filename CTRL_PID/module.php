@@ -27,18 +27,18 @@
             /* Create RegisterVariablen
             */
             
-            $this->RegisterVariableFloat("I-Anteil", "I-Anteil", "CTRL.Val"); //den dynamischen internen Reglerzustand I-Wert vom Typ CTRL.IVal anlegen
-            $this->RegisterVariableFloat("Xi_old", "Xi_old", "CTRL.Val"); //Variable für den alten letzen Eingangswert einrichten
-            $this->RegisterVariableBoolean("is_active", "is_active", "~Switch"); //ist der Regler Aktiv oder nicht 
+            $this->RegisterVariableFloat("IAnteil", "I-Anteil", "CTRL.Val"); //den dynamischen internen Reglerzustand I-Wert vom Typ CTRL.IVal anlegen
+            $this->RegisterVariableFloat("Xiold", "Xi_old", "CTRL.Val"); //Variable für den alten letzen Eingangswert einrichten
+            $this->RegisterVariableBoolean("isactive", "is_active", "~Switch"); //ist der Regler Aktiv oder nicht 
             
              
             /* Create Eigenschafts variablen
             */
-            $this->RegisterPropertyFloat("K_P", 1);
-            $this->RegisterPropertyFloat("K_I", 0);
-            $this->RegisterPropertyFloat("K_D", 0);
+            $this->RegisterPropertyFloat("KP", 1);
+            $this->RegisterPropertyFloat("KI", 0);
+            $this->RegisterPropertyFloat("KD", 0);
 
-            $this->RegisterPropertyInteger("cycle_time", 1000);
+            $this->RegisterPropertyInteger("cycletime", 1000);
             
             
             /* Create zyklischer Timer
@@ -55,7 +55,7 @@
             /* eigene Apply Changes
             */
             
-            $this->SetTimerInterval("cycle_time", ReadPropertyInteger ( "cycle_time" ));
+            $this->SetTimerInterval("cycle_poller", ReadPropertyInteger ( "cycletime" ));
             
             
             
@@ -71,6 +71,13 @@
         public function CTRL_SetEnable($switch) {
             //schaltet den Regler an oder aus
             SetValue(GetIDForIdent ( "is_active" ),$switch);
+            
+            if ($switch) {
+              $this->SetTimerInterval("cycle_poller", ReadPropertyInteger ( "cycletime" ));
+              }
+              else {
+              $this->SetTimerInterval("cycle_poller", 0);
+              }
         }
     }
 ?>
