@@ -7,7 +7,7 @@
         
         { "type": "HorizontalSlider", "name": "cycle_time", "caption": "CTRL Cycle Time", "minimum": 200, "maximum": 60000 }
 
-        ]}
+        
     ],
     "actions":
     [
