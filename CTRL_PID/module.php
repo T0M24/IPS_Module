@@ -43,7 +43,7 @@
             
             /* Create zyklischer Timer
             */
-            $this->RegisterTimer ( "cycle_poller", 1000 /*ms*/, /*script*/"echo 'Hallo Welt'; " )
+            $this->RegisterTimer ( "cycle_poller", 1000 /*ms*/, /*script*/"echo 'Hallo Welt'; " );
  
         }
  
