@@ -12,11 +12,11 @@
     "actions":
     [
         { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable(true);" },
-        { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable(false);" },
+        { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable(false);" }
     ],
     "status":
     [
         { "code": 101, "icon": "stop", "caption": "Controller is inactive" },
-        { "code": 102, "icon": "active", "caption": "Controller is active" },
+        { "code": 102, "icon": "active", "caption": "Controller is active" }
     ]
 }
