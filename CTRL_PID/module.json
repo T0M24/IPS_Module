@@ -5,8 +5,7 @@
     "vendor": "Community",
     "aliases":
     [
-        "Name1UnterstütztesGerät",
-        "Name2UnterstütztesGerät"
+        "PID-Regler"
     ],  
     "parentRequirements": [],
     "childRequirements": [],

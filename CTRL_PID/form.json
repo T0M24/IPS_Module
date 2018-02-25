@@ -1,0 +1,22 @@
+{
+    "elements":
+    [
+        { "type": "NumberSpinner", "name": "K_P", "caption": "K_P", "digits": 3},
+        { "type": "NumberSpinner", "name": "K_I", "caption": "K_I", "digits": 3},
+        { "type": "NumberSpinner", "name": "K_D", "caption": "K_D", "digits": 3},
+        
+        { "type": "HorizontalSlider", "name": "cycle_time", "caption": "CTRL Cycle Time", "minimum": 200, "maximum": 60000 }
+
+        ]}
+    ],
+    "actions":
+    [
+        { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable(true);" },
+        { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable(false);" },
+    ],
+    "status":
+    [
+        { "code": 101, "icon": "stop", "caption": "Controller is inactive" },
+        { "code": 102, "icon": "active", "caption": "Controller is active" },
+    ]
+}
