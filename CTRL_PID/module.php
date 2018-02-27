@@ -7,7 +7,7 @@
     const IDENT_IANTEIL = 'IAnteil';
     const IDENT_XIOLD   = 'Xiold';
     const IDENT_ISACTIVE = 'isactive';
-    const IDENT_CYCLETIME = 'cycletime';
+    const IDENT_CYCLE_TIME = 'cycle_time';
     const IDENT_CYCLE_POLLER = 'cycle_poller';
 
     const IDPROP_KP = 'KP';
@@ -50,7 +50,7 @@
             $this->RegisterPropertyFloat(self::IDPROP_KI, 0);
             $this->RegisterPropertyFloat(self::IDPROP_KD, 0);
 
-            $this->RegisterPropertyInteger(self::IDENT_CYCLETIME, 1000);
+            $this->RegisterPropertyInteger(self::IDENT_CYCLE_TIME, 1000);
             
             
             /* Create zyklischer Timer
@@ -67,7 +67,7 @@
             /* eigene Apply Changes
             */
             
-            $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, $this->ReadPropertyInteger ( self::IDENT_CYCLETIME ));
+            $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, $this->ReadPropertyInteger ( self::IDENT_CYCLE_TIME ));
             
             
             
@@ -85,7 +85,7 @@
             SetValue($this->GetIDForIdent ( self::IDENT_ISACTIVE ),$switch);
             
             if ($switch) {
-              $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, $this->ReadPropertyInteger ( self::IDENT_CYCLETIME ));
+              $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, $this->ReadPropertyInteger ( self::IDENT_CYCLE_TIME ));
               }
               else {
               $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, 0);

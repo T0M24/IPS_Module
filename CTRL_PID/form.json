@@ -3,15 +3,15 @@
     [
         { "type": "NumberSpinner", "name": "KP", "caption": "KP", "digits": 3},
         { "type": "NumberSpinner", "name": "KI", "caption": "KI", "digits": 3},
-        { "type": "NumberSpinner", "name": "KD", "caption": "KD", "digits": 3}
+        { "type": "NumberSpinner", "name": "KD", "caption": "KD", "digits": 3},
         
+        { "type": "IntervalBox", "name": "cycle_time", "caption": "ms" }
        
 
         
     ],
     "actions":
     [
-        { "type": "HorizontalSlider", "name": "cycle_time", "caption": "CTRL Cycle Time", "minimum": 200, "maximum": 60000, "onChange": "echo $id;" },
         { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable($id,true);" },
         { "type": "Button", "label": "Deactivate", "onClick": "CTRL_SetEnable($id,false);" }
     ],
