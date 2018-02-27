@@ -12,8 +12,8 @@
     "actions":
     [
         { "type": "HorizontalSlider", "name": "cycle_time", "caption": "CTRL Cycle Time", "minimum": 200, "maximum": 60000, "onChange": "echo $id;" },
-        { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable(true);" },
-        { "type": "Button", "label": "Deactivate", "onClick": "CTRL_SetEnable(false);" }
+        { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable($id,true);" },
+        { "type": "Button", "label": "Deactivate", "onClick": "CTRL_SetEnable($id,false);" }
     ],
     "status":
     [
