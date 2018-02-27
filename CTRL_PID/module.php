@@ -1,5 +1,9 @@
 <?
-    //Klassenkonstanten
+
+    // Klassendefinition
+    class CTRL_PID extends IPSModule {
+ 
+     //Klassenkonstanten
     const IDENT_IANTEIL = 'IAnteil';
     const IDENT_XIOLD   = 'Xiold';
     const IDENT_ISACTIVE = 'isactive';
@@ -10,11 +14,7 @@
     const IDPROP_KI = 'KI';
     const IDPROP_KD = 'KD';
     
-//    const IDENT_ = '';
-    // Klassendefinition
-    class CTRL_PID extends IPSModule {
- 
-        // Der Konstruktor des Moduls
+//    const IDENT_ = '';       // Der Konstruktor des Moduls
         // Überschreibt den Standard Kontruktor von IPS
         public function __construct($InstanceID) {
             // Diese Zeile nicht löschen
