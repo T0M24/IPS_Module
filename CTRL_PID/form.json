@@ -17,7 +17,7 @@
     ],
     "status":
     [
-        { "code": 101, "icon": "stop", "caption": "Controller is inactive" },
         { "code": 102, "icon": "active", "caption": "Controller is active" }
+        { "code": 201, "icon": "inactive", "caption": "Grenzen bei Timer-Intervall beachten!(0,2-3600s)" }
     ]
 }
