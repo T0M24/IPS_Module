@@ -23,14 +23,16 @@
     const STAT_TIMERWARNING = 201; /*Timerwert außerhalb Grenzen*/
     
 //    const IDENT_ = '';       // Der Konstruktor des Moduls
+        public static $InstanceID;
+
         // Überschreibt den Standard Kontruktor von IPS
         public function __construct($InstanceID) {
             // Diese Zeile nicht löschen
             parent::__construct($InstanceID);
  
             // Selbsterstellter Code
+            $this->$InstanceID=$InstanceID;
         }
- 
         // Überschreibt die interne IPS_Create($id) Funktion
         public function Create() {
             // Diese Zeile nicht löschen.
@@ -67,7 +69,7 @@
             
             /* Create zyklischer Timer
             */
-            $this->RegisterTimer (self::IDENT_CYCLE_POLLER, 1000 /*ms*/, /*script*/"echo 'Hallo Welt'; " );
+            $this->RegisterTimer (self::IDENT_CYCLE_POLLER, 1000 /*ms*/, /*script*/"CTRL_Calculate($this->$InstanceID); " );
  
         }
  
