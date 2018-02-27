@@ -158,7 +158,7 @@
             
             $y= $yP + $yI + $yD;
             
-            SetValueFloat($this->GetIDForIdent ( self::IDENT_IANTEIL),$y);
+            SetValueFloat($this->GetIDForIdent ( self::IDENT_Y),$y);
             
             SetValueFloat($I_ID,$yI); //I-Anteil wieder abspeichern
             SetValueFloat($X_Ist_alt_ID,$X_Ist); //letzten Istwert abspeichern         
