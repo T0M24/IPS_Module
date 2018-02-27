@@ -70,7 +70,7 @@
         */
         public function SetEnable($switch) {
             //schaltet den Regler an oder aus
-            SetValue(GetIDForIdent ( "is_active" ),$switch);
+            SetValue($this->GetIDForIdent ( "is_active" ),$switch);
             
             if ($switch) {
               $this->SetTimerInterval("cycle_poller", $this->ReadPropertyInteger ( "cycletime" ));
