@@ -68,7 +68,7 @@
             
             /* Create zyklischer Timer
             */
-            $this->RegisterTimer (self::IDENT_CYCLE_POLLER, 1000 /*ms*/, /*script*/"CTRL_Calculate(".$this->$InstanceID."); " );
+            $this->RegisterTimer (self::IDENT_CYCLE_POLLER, 1000 /*ms*/, /*script*/'CTRL_Calculate($_IPS[\'TARGET\']);' );
  
         }
  
