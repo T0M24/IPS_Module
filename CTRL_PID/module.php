@@ -1,4 +1,16 @@
 <?
+    //Klassenkonstanten
+    const IDENT_IANTEIL = 'IAnteil';
+    const IDENT_XIOLD   = 'Xiold';
+    const IDENT_ISACTIVE = 'isactive';
+    const IDENT_CYCLETIME = 'cycletime';
+    const IDENT_CYCLE_POLLER = 'cycle_poller';
+
+    const IDPROP_KP = 'KP';
+    const IDPROP_KI = 'KI';
+    const IDPROP_KD = 'KD';
+    
+//    const IDENT_ = '';
     // Klassendefinition
     class CTRL_PID extends IPSModule {
  
@@ -27,23 +39,23 @@
             /* Create RegisterVariablen
             */
             
-            $this->RegisterVariableFloat("IAnteil", "I-Anteil", "CTRL.Val"); //den dynamischen internen Reglerzustand I-Wert vom Typ CTRL.IVal anlegen
-            $this->RegisterVariableFloat("Xiold", "Xi_old", "CTRL.Val"); //Variable für den alten letzen Eingangswert einrichten
-            $this->RegisterVariableBoolean("isactive", "is_active", "~Switch"); //ist der Regler Aktiv oder nicht 
+            $this->RegisterVariableFloat(self::IDENT_IANTEIL, "I-Anteil", "CTRL.Val"); //den dynamischen internen Reglerzustand I-Wert vom Typ CTRL.IVal anlegen
+            $this->RegisterVariableFloat(self::IDENT_XIOLD, "Xi_old", "CTRL.Val"); //Variable für den alten letzen Eingangswert einrichten
+            $this->RegisterVariableBoolean(self::IDENT_ISACTIVE, "is_active", "~Switch"); //ist der Regler Aktiv oder nicht 
             
              
             /* Create Eigenschafts variablen
             */
-            $this->RegisterPropertyFloat("KP", 1);
-            $this->RegisterPropertyFloat("KI", 0);
-            $this->RegisterPropertyFloat("KD", 0);
+            $this->RegisterPropertyFloat(self::IDPROP_KP, 1);
+            $this->RegisterPropertyFloat(self::IDPROP_KI, 0);
+            $this->RegisterPropertyFloat(self::IDPROP_KD, 0);
 
-            $this->RegisterPropertyInteger("cycletime", 1000);
+            $this->RegisterPropertyInteger(self::IDENT_CYCLETIME, 1000);
             
             
             /* Create zyklischer Timer
             */
-            $this->RegisterTimer ( "cycle_poller", 1000 /*ms*/, /*script*/"echo 'Hallo Welt'; " );
+            $this->RegisterTimer (self::IDENT_CYCLE_POLLER, 1000 /*ms*/, /*script*/"echo 'Hallo Welt'; " );
  
         }
  
@@ -55,7 +67,7 @@
             /* eigene Apply Changes
             */
             
-            $this->SetTimerInterval("cycle_poller", $this->ReadPropertyInteger ( "cycletime" ));
+            $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, $this->ReadPropertyInteger ( self::IDENT_CYCLETIME ));
             
             
             
@@ -70,13 +82,13 @@
         */
         public function SetEnable($switch) {
             //schaltet den Regler an oder aus
-            SetValue($this->GetIDForIdent ( "is_active" ),$switch);
+            SetValue($this->GetIDForIdent ( self::IDENT_ISACTIVE ),$switch);
             
             if ($switch) {
-              $this->SetTimerInterval("cycle_poller", $this->ReadPropertyInteger ( "cycletime" ));
+              $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, $this->ReadPropertyInteger ( self::IDENT_CYCLETIME ));
               }
               else {
-              $this->SetTimerInterval("cycle_poller", 0);
+              $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, 0);
               }
         }
     }
