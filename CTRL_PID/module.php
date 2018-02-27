@@ -131,9 +131,9 @@
              
             //zuerst die Reglervariablen ermitteln
             
-            $KP = ReadPropertyFloat( self::IDPROP_KP);
-            $KI = ReadPropertyFloat( self::IDPROP_KI);
-            $KD = ReadPropertyFloat( self::IDPROP_KD);
+            $KP = $this->ReadPropertyFloat( self::IDPROP_KP);
+            $KI = $this->ReadPropertyFloat( self::IDPROP_KI);
+            $KD = $this->ReadPropertyFloat( self::IDPROP_KD);
             
             $X_Ist      = GetValueFloat($this->GetIDForIdent ( self::IDENT_XI));
             $X_Ist_alt  = GetValueFloat($X_Ist_alt_ID = $this->GetIDForIdent ( self::IDENT_XIOLD));
