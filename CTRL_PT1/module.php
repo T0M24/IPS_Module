@@ -162,8 +162,8 @@
             //zuerst die Reglervariablen ermitteln
             
             
-            $In      = GetValueFloat($this->GetIDForIdent ( self::IDENT_IN));
-            $In_old  = GetValueFloat($In_old_ID = $this->GetIDForIdent ( self::IDENT_INOLD));
+            $In      = $this->GetValueFloat($this->GetIDForIdent ( self::IDENT_IN));
+            $In_old  = $this->GetValueFloat($In_old_ID = $this->GetIDForIdent ( self::IDENT_INOLD));
             
             $a0   = $this->GetValueFloat($this->GetIDForIdent( self::IDPROP_A0));
             $a1   = $this->GetValueFloat($this->GetIDForIdent( self::IDPROP_A1));
