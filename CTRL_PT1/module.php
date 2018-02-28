@@ -140,7 +140,7 @@
             $Ts = $this->ReadPropertyInteger ( self::IDENT_CYCLE_TIME );
             
             $a0 = ($K*$Ts) / ($Ts + 2*$Ti); 
-            $a1 = $this->a0; 
+            $a1 = $a0; 
             $b1 = ($Ts - 2*$Ti) / ($Ts + 2*$Ti);
             
             SetValueFloat($this->GetIDForIdent (self::IDPROP_A0),$a0); //und Speicher abspeichern
