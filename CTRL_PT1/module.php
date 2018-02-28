@@ -16,10 +16,10 @@
     const IDPROP_K = 'K';
     const IDPROP_TI = 'Ti';
     
-   /* const IDPROP_A0 = 'A0';
+    const IDPROP_A0 = 'A0';
     const IDPROP_A1 = 'A1';
     const IDPROP_B1 = 'B1';
-    */
+    
 
     //Fehlercodes
     const STAT_TIMERWARNING = 201; /*Timerwert außerhalb Grenzen*/
@@ -33,9 +33,6 @@
             parent::__construct($InstanceID);
  
             // Selbsterstellter Code
-            static $a0=0.0;
-            static $a1=0.0;
-            static $b1=0.0;
         }
         // Überschreibt die interne IPS_Create($id) Funktion
         public function Create() {
@@ -58,6 +55,11 @@
             $this->RegisterVariableFloat(self::IDENT_INOLD, self::IDENT_INOLD, "CTRL.Val"); 
             
             $this->RegisterVariableBoolean(self::IDENT_ISACTIVE, "is_active", "~Switch"); //ist der Regler Aktiv oder nicht 
+
+            $this->RegisterVariableFloat(self::IDPROP_A0,self::IDPROP_A0,  "CTRL.Val"); //die drei Koeffizienten für die Berechnung
+            $this->RegisterVariableFloat(self::IDPROP_A1,self::IDPROP_A1,  "CTRL.Val");
+            $this->RegisterVariableFloat(self::IDPROP_B1,self::IDPROP_B1,  "CTRL.Val");
+
             
              
             /* Create Eigenschafts variablen
@@ -65,10 +67,7 @@
             $this->RegisterPropertyFloat(self::IDPROP_K, 1);
             $this->RegisterPropertyFloat(self::IDPROP_TI, 20); /*Sekunden*/
 
-           /* $this->RegisterPropertyFloat(self::IDPROP_A0, 0); //die drei Koeffizienten für die Berechnung
-            $this->RegisterPropertyFloat(self::IDPROP_A1, 0);
-            $this->RegisterPropertyFloat(self::IDPROP_B1, 0);
-*/
+
 
             $this->RegisterPropertyInteger(self::IDENT_CYCLE_TIME, 1000);
             
@@ -140,9 +139,14 @@
             $Ti = $this->ReadPropertyFloat( self::IDPROP_TI);
             $Ts = $this->ReadPropertyInteger ( self::IDENT_CYCLE_TIME );
             
-            $this->a0 = ($K*$Ts) / ($Ts + 2*$Ti); 
-            $this->a1 = $this->a0; 
-            $this->b1 = ($Ts - 2*$Ti) / ($Ts + 2*$Ti);
+            $a0 = ($K*$Ts) / ($Ts + 2*$Ti); 
+            $a1 = $this->a0; 
+            $b1 = ($Ts - 2*$Ti) / ($Ts + 2*$Ti);
+            
+            SetValueFloat($this->GetIDForIdent (self::IDPROP_A0),$a0); //und Speicher abspeichern
+            SetValueFloat($this->GetIDForIdent (self::IDPROP_A1),$a1); //und Speicher abspeichern
+            SetValueFloat($this->GetIDForIdent (self::IDPROP_B1),$b1); //und Speicher abspeichern
+            
             
             }
         
