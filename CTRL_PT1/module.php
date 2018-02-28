@@ -165,8 +165,12 @@
             $In      = GetValueFloat($this->GetIDForIdent ( self::IDENT_IN));
             $In_old  = GetValueFloat($In_old_ID = $this->GetIDForIdent ( self::IDENT_INOLD));
             
-            $out=$In_old + $this->a0*$In;
-            $In_old=$this->a1*$In - $this->b1*$out;
+            $a0   = $this->GetValueFloat($this->GetIDForIdent( self::IDPROP_A0));
+            $a1   = $this->GetValueFloat($this->GetIDForIdent( self::IDPROP_A1));
+            $b1   = $this->GetValueFloat($this->GetIDForIdent( self::IDPROP_B1));
+            
+            $out=$In_old + $a0*$In;
+            $In_old=$a1*$In - $b1*$out;
             
             SetValueFloat($In_old_ID,$In_old); //und Speicher abspeichern
             SetValueFloat($this->GetIDForIdent (self::IDENT_OUT),$out); //und Ausgang abspeichern
