@@ -1,0 +1,14 @@
+{
+    "id": "{E404E3B0-539E-4842-B3EC-A565305061F6}",
+    "name": "CTRL_PT1",
+    "type": 3,
+    "vendor": "Community",
+    "aliases":
+    [
+        "PT1-Simulation"
+    ],  
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "CTRL"
+}
