@@ -137,7 +137,7 @@
               berechnet aus den Faktoren die Koeffizienten (bilineare Transformation)
             */
             $K  = $this->ReadPropertyFloat( self::IDPROP_K);
-            $TI = $this->ReadPropertyFloat( self::IDPROP_TI);
+            $Ti = $this->ReadPropertyFloat( self::IDPROP_TI);
             $Ts = $this->ReadPropertyInteger ( self::IDENT_CYCLE_TIME );
             
             $this->a0 = ($K*$Ts) / ($Ts + 2*$Ti); 
