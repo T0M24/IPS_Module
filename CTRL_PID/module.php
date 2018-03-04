@@ -23,6 +23,8 @@
     const STAT_TIMERWARNING = 201; /*Timerwert außerhalb Grenzen*/
     
 //    const IDENT_ = '';       // Der Konstruktor des Moduls
+    
+    const VAR_PROFILE = "CTRL.Val";
        
 
         // Überschreibt den Standard Kontruktor von IPS
@@ -39,20 +41,20 @@
             
             /* Create Variablenprofile
             */
-            if (!IPS_VariableProfileExists("CTRL.Val")) {
-            			IPS_CreateVariableProfile("CTRL.Val", 2);   //Typ:float
-            			IPS_SetVariableProfileValues("CTRL.Val", -100, 100, 10);
+            if (!IPS_VariableProfileExists( VAR_PROFILE)) {
+            			IPS_CreateVariableProfile( VAR_PROFILE, 2);   //Typ:float
+            			IPS_SetVariableProfileValues( VAR_PROFILE, -100, 100, 10);
             		}
  
  
             /* Create RegisterVariablen
             */
             
-            $this->RegisterVariableFloat(self::IDENT_IANTEIL, "I-Anteil", "CTRL.Val"); //den dynamischen internen Reglerzustand I-Wert vom Typ CTRL.IVal anlegen
-            $this->RegisterVariableFloat(self::IDENT_XIOLD, "Xi_old", "CTRL.Val"); //Variable für den alten letzen Eingangswert einrichten
-            $this->RegisterVariableFloat(self::IDENT_XI, "Xi", "CTRL.Val"); //Variable für den aktuellen Eingangswert einrichten
-            $this->RegisterVariableFloat(self::IDENT_XSET, "X_Soll", "CTRL.Val"); //Variable für den aktuellen Eingangswert einrichten
-            $this->RegisterVariableFloat(self::IDENT_Y, "Y_out", "CTRL.Val"); //Variable für den aktuellen Stellwert einrichten
+            $this->RegisterVariableFloat(self::IDENT_IANTEIL,    "I-Anteil",    VAR_PROFILE); //den dynamischen internen Reglerzustand I-Wert vom Typ CTRL.IVal anlegen
+            $this->RegisterVariableFloat(self::IDENT_XIOLD,      "Xi_old",      VAR_PROFILE); //Variable für den alten letzen Eingangswert einrichten
+            $this->RegisterVariableFloat(self::IDENT_XI,         "Xi",          VAR_PROFILE); //Variable für den aktuellen Eingangswert einrichten
+            $this->RegisterVariableFloat(self::IDENT_XSET,       "X_Soll",      VAR_PROFILE); //Variable für den aktuellen Eingangswert einrichten
+            $this->RegisterVariableFloat(self::IDENT_Y,          "Y_out",       VAR_PROFILE); //Variable für den aktuellen Stellwert einrichten
             
             $this->RegisterVariableBoolean(self::IDENT_ISACTIVE, "is_active", "~Switch"); //ist der Regler Aktiv oder nicht 
             
