@@ -43,25 +43,25 @@
             
             /* Create Variablenprofile
             */
-            if (!IPS_VariableProfileExists(VAR_PROFILE))    {
-            			IPS_CreateVariableProfile     (VAR_PROFILE, 2);   //Typ:float
-            			IPS_SetVariableProfileValues  (VAR_PROFILE, -100, 100, 10);
-            			IPS_SetVariableProfileDigits  (VAR_PROFILE,2)
+            if (!IPS_VariableProfileExists(self::VAR_PROFILE))    {
+            			IPS_CreateVariableProfile     (self::VAR_PROFILE, 2);   //Typ:float
+            			IPS_SetVariableProfileValues  (self::VAR_PROFILE, -100, 100, 10);
+            			IPS_SetVariableProfileDigits  (self::VAR_PROFILE,2);
             		}
  
  
             /* Create RegisterVariablen
             */
             
-            $this->RegisterVariableFloat(self::IDENT_OUT,   self::IDENT_OUT,    VAR_PROFILE); 
-            $this->RegisterVariableFloat(self::IDENT_IN,    self::IDENT_IN,     VAR_PROFILE); 
-            $this->RegisterVariableFloat(self::IDENT_INOLD, self::IDENT_INOLD,  VAR_PROFILE); 
+            $this->RegisterVariableFloat(self::IDENT_OUT,   self::IDENT_OUT,    self::VAR_PROFILE); 
+            $this->RegisterVariableFloat(self::IDENT_IN,    self::IDENT_IN,     self::VAR_PROFILE); 
+            $this->RegisterVariableFloat(self::IDENT_INOLD, self::IDENT_INOLD,  self::VAR_PROFILE); 
             
             $this->RegisterVariableBoolean(self::IDENT_ISACTIVE, "is_active", "~Switch"); //ist der Regler Aktiv oder nicht 
 
-            $this->RegisterVariableFloat(self::IDPROP_A0,self::IDPROP_A0,  VAR_PROFILE); //die drei Koeffizienten für die Berechnung
-            $this->RegisterVariableFloat(self::IDPROP_A1,self::IDPROP_A1,  VAR_PROFILE);
-            $this->RegisterVariableFloat(self::IDPROP_B1,self::IDPROP_B1,  VAR_PROFILE);
+            $this->RegisterVariableFloat(self::IDPROP_A0,self::IDPROP_A0,  self::VAR_PROFILE); //die drei Koeffizienten für die Berechnung
+            $this->RegisterVariableFloat(self::IDPROP_A1,self::IDPROP_A1,  self::VAR_PROFILE);
+            $this->RegisterVariableFloat(self::IDPROP_B1,self::IDPROP_B1,  self::VAR_PROFILE);
 
             
              
