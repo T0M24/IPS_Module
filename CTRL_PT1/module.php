@@ -1,5 +1,5 @@
 <?
-
+    require_once ('VarProfileManagement.inc');
     // Klassendefinition
     class CTRL_PT1 extends IPSModule {
  
@@ -9,19 +9,13 @@
     const IDENT_OUT     = 'Yout';
     
     const IDENT_ISACTIVE = 'isactive';
-    
     const IDENT_CYCLE_TIME = 'cycle_time';
     const IDENT_CYCLE_POLLER = 'cycle_poller';
 
     const IDPROP_K = 'K';
     const IDPROP_TI = 'Ti';
     
-    const IDPROP_A0 = 'A0';
-    const IDPROP_A1 = 'A1';
-    const IDPROP_B1 = 'B1';
-    
     const VAR_PROFILE = "CTRL.Val";
-    
 
     //Fehlercodes
     const STAT_TIMERWARNING = 201; /*Timerwert außerhalb Grenzen*/
@@ -59,11 +53,6 @@
             
             $this->RegisterVariableBoolean(self::IDENT_ISACTIVE, "is_active", "~Switch"); //ist der Regler Aktiv oder nicht 
 
-            $this->RegisterVariableFloat(self::IDPROP_A0,self::IDPROP_A0,  self::VAR_PROFILE); //die drei Koeffizienten für die Berechnung
-            $this->RegisterVariableFloat(self::IDPROP_A1,self::IDPROP_A1,  self::VAR_PROFILE);
-            $this->RegisterVariableFloat(self::IDPROP_B1,self::IDPROP_B1,  self::VAR_PROFILE);
-
-            
              
             /* Create Eigenschafts variablen
             */
@@ -106,10 +95,6 @@
             
             $this->SetTimerInterval(self::IDENT_CYCLE_POLLER,$time);
 
-            $this->calc_Koeff();
-            
-            
-            
         }
  
         /**
@@ -130,28 +115,8 @@
               $this->SetTimerInterval(self::IDENT_CYCLE_POLLER, 0);
               }
               
-            $this->calc_Koeff();
         }
         
-        public function calc_Koeff() {
-            
-            /*
-              berechnet aus den Faktoren die Koeffizienten (bilineare Transformation)
-            */
-            $K  = $this->ReadPropertyFloat( self::IDPROP_K);
-            $Ti = $this->ReadPropertyFloat( self::IDPROP_TI);
-            $Ts = $this->ReadPropertyInteger ( self::IDENT_CYCLE_TIME );
-            
-            $a0 = ($K*$Ts) / ($Ts + 2*$Ti); 
-            $a1 = $a0; 
-            $b1 = ($Ts - 2*$Ti) / ($Ts + 2*$Ti);
-            
-            SetValueFloat($this->GetIDForIdent (self::IDPROP_A0),$a0); //und Speicher abspeichern
-            SetValueFloat($this->GetIDForIdent (self::IDPROP_A1),$a1); //und Speicher abspeichern
-            SetValueFloat($this->GetIDForIdent (self::IDPROP_B1),$b1); //und Speicher abspeichern
-            
-            
-            }
         
         /* 
           Der eigentliche Regleralgorithmus
@@ -163,7 +128,10 @@
              */
              
             //zuerst die Reglervariablen ermitteln
-            
+            $K  = $this->ReadPropertyFloat( self::IDPROP_K);
+            $Ti = $this->ReadPropertyFloat( self::IDPROP_TI);
+            $Ts = $this->ReadPropertyInteger ( self::IDENT_CYCLE_TIME );
+           
             
             $In      = GetValueFloat($this->GetIDForIdent ( self::IDENT_IN));
             $In_old  = GetValueFloat($In_old_ID = $this->GetIDForIdent ( self::IDENT_INOLD));
