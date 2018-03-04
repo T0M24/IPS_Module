@@ -11,8 +11,8 @@
     ],
     "actions":
     [
-        { "type": "Button", "label": "Set Active", "onClick": "CTRL_SetEnable($id,true);" },
-        { "type": "Button", "label": "Deactivate", "onClick": "CTRL_SetEnable($id,false);" }
+        { "type": "Button", "label": "Set Active", "onClick": "CTRLPT1_SetEnable($id,true);" },
+        { "type": "Button", "label": "Deactivate", "onClick": "CTRLPT1_SetEnable($id,false);" }
     ],
     "status":
     [
