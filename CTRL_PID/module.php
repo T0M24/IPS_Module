@@ -1,5 +1,5 @@
 <?
-    require_once ('VarProfileManagement.inc');
+    require_once ('../lib/VarProfileManagement.inc');
 
     // Klassendefinition
     class CTRL_PID extends IPSModule {
