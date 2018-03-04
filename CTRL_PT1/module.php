@@ -133,18 +133,21 @@
             $Ts = $this->ReadPropertyInteger ( self::IDENT_CYCLE_TIME );
            
             
-            $In      = GetValueFloat($this->GetIDForIdent ( self::IDENT_IN));
-            $In_old  = GetValueFloat($In_old_ID = $this->GetIDForIdent ( self::IDENT_INOLD));
+            $In          = GetValueFloat($this->GetIDForIdent ( self::IDENT_IN));
+            $In_old_ID   = $this->GetIDForIdent ( self::IDENT_INOLD);
+            $In_old      = GetValueFloat($In_old_ID);
+            $out_ID      = $this->GetIDForIdent ( self::IDENT_OUT);
             
-            $a0   = GetValueFloat($this->GetIDForIdent( self::IDPROP_A0));
-            $a1   = GetValueFloat($this->GetIDForIdent( self::IDPROP_A1));
-            $b1   = GetValueFloat($this->GetIDForIdent( self::IDPROP_B1));
+            
+            $a0   = $K*($Ts/1000) / ($Ts/1000 + 2*$Ti);
+            $a1   = $a0;
+            $b1   = ($Ts/1000 - 2*$Ti) / ($Ts/1000 + 2*$Ti);
             
             $out=$In_old + $a0*$In;
             $In_old=$a1*$In - $b1*$out;
             
+            SetValueFloat($out_ID,$out); //und Ausgang abspeichern
             SetValueFloat($In_old_ID,$In_old); //und Speicher abspeichern
-            SetValueFloat($this->GetIDForIdent (self::IDENT_OUT),$out); //und Ausgang abspeichern
             
         
         }
