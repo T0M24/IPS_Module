@@ -1,19 +1,5 @@
 {
-    "elements":
-    [
-        { "type": "NumberSpinner", "name": "K", "caption": "K ", "digits": 3},
-        { "type": "NumberSpinner", "name": "Ti", "caption": "Ti [s]", "digits": 3},
-        
-        { "type": "IntervalBox", "name": "cycle_time", "caption": "ms" }
-       
-
-        
-    ],
-    "actions":
-    [
-        { "type": "Button", "label": "Set Active", "onClick": "CTRLPT1_SetEnable($id,true);" },
-        { "type": "Button", "label": "Deactivate", "onClick": "CTRLPT1_SetEnable($id,false);" }
-    ],
+   
     "status":
     [
         { "code": 102, "icon": "active", "caption": "Controller is active" },
