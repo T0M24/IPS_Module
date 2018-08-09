@@ -1,0 +1,14 @@
+{
+    "id": "{27B5493E-96E7-4FCE-9A4E-281A847CE20D}",
+    "name": "SECU__MASTER",
+    "type": 3,
+    "vendor": "Community",
+    "aliases":
+    [
+        "SECURE Main"
+    ],  
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "SECUMA"
+}
