@@ -46,10 +46,10 @@
             */
             if (!IPS_VariableProfileExists(self::VAR_PROFILE_MODE))    {
             			IPS_CreateVariableProfile     (self::VAR_PROFILE_MODE, 1);   //Typ:integer
-            			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 0, "LOCKED", "Lock", #ff0033);
-            			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 1, "UNLOCK_LEVEL1", "LockOpen", #009900);
-            			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 2, "UNLOCK_LEVEL2", "LockOpen", #009900);
-            			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 3, "UNLOCK_LEVEL3", "LockOpen", #009900);
+            			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 0, "LOCKED", "Lock", 0xff0033);
+            			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 1, "UNLOCK_LEVEL1", "LockOpen", 0x009900);
+            			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 2, "UNLOCK_LEVEL2", "LockOpen", 0x009900);
+            			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 3, "UNLOCK_LEVEL3", "LockOpen", 0x009900);
             		}
  
  
