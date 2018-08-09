@@ -16,7 +16,7 @@
     const IDENT_NOACC_LEVEL_2         = 'No_access4Level2';
     const IDENT_NOACC_LEVEL_3         = 'Vo_access4Level3';
     
-    const ID_CurrCode                = 'CurrCode'
+    const ID_CurrCode                = 'CurrCode';
     
     const VAR_PROFILE_PREFIX = "SECU.";
     const VAR_PROFILE_MODE = VAR_PROFILE_PREFIX."MODE";

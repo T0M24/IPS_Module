@@ -119,7 +119,7 @@
         
         
         /* 
-          Der eigentliche Regleralgorithmus
+          Der eigentliche PT1-Alorithmus
         */
         public function Calculate() {
         
