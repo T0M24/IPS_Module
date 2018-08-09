@@ -50,7 +50,6 @@
             			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 1, "UNLOCK_LEVEL1", "LockOpen", #009900);
             			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 2, "UNLOCK_LEVEL2", "LockOpen", #009900);
             			IPS_SetVariableProfileAssociation (self::VAR_PROFILE_MODE, 3, "UNLOCK_LEVEL3", "LockOpen", #009900);
-            			IPS_SetVariableProfileDigits  (self::VAR_PROFILE_MODE,0);
             		}
  
  
