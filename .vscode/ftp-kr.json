@@ -1,0 +1,17 @@
+{
+    "host": "192.168.0.5",
+    "username": "ftp_docker_deployer",
+    "password": "ftpdeployer",
+    "remotePath": "/docker/symcon/var_lib_symcon/modules",
+    "protocol": "ftp",
+    "port": 0,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": true,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode",
+        ".code-workspace"
+    ]
+}

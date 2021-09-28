@@ -1,0 +1,15 @@
+{
+    "id": "{5D46CB47-272A-66F2-4B0A-D76B0867CAEE}",
+    "name": "Versionspruefung",
+    "type": 3,
+    "vendor": "GeräteherstellerIn",
+    "aliases":
+    [
+        "Versionsprüfung"
+    ],
+    "url": "https://www.symcon.de",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VP"
+}
