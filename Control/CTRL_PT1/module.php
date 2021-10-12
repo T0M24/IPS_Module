@@ -1,5 +1,4 @@
 <?
-    require_once (__DIR__ . "/../libs/VarProfileManagement.inc");
     // Klassendefinition
     class CTRL_PT1 extends IPSModule {
  

@@ -1,8 +1,10 @@
 {
     "translations": {
         "de": { 
-            "Zu übersetzendes Wort 1": "Übersetzung ins Deutsche - Wort 1",
-            "Zu übersetzendes Wort 2": "Übersetzung ins Deutsche - Wort 2"
+            "Set Active": "Aktiv setzen",
+            "Deactivate": "Deaktivieren",
+            "attention to contraints (0,2-3600s)":"Grenzen bei Timer-Intervall beachten!(0,2-3600s)",
+            "controller is active":"Regler ist aktiv"
         }
     }
 }

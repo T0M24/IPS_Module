@@ -1,8 +1,8 @@
 {
 	"id": "{50446DAF-6F10-F633-12E7-A8E1D09C9AB4}",
 	"author": "T0M24",
-	"name": "VarMon",
-	"url": "https://github.com/T0M24/IPS_Module/Versionpruefung",
+	"name": "VariableMonitor",
+	"url": "https://github.com/T0M24/IPS_Module/VariableMonitor",
 	"compatibility": {
 		"version": "5.0"
 	},

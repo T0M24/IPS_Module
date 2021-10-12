@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-	class VarMon extends IPSModule
+	class LimitMonitor extends IPSModule
 	{
 		public function Create()
 		{

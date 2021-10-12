@@ -1,0 +1,23 @@
+{
+    "elements": [ 
+        {
+            "type": "CheckBox",
+            "name": "enablearchiv",
+            "caption":"Archive active"
+        },
+        {
+            "type": "CheckBox",
+            "name": "enablereduction",
+            "caption":"Reduction active"
+        },
+        {
+            "type": "SelectVariable",
+            "name": "loggingvariableID",
+            "caption": "Target",
+            "validVariableTypes": [1, 2]
+            
+        }
+    ],
+    "actions": [],
+    "status": []
+}

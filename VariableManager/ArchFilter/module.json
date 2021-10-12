@@ -1,0 +1,12 @@
+{
+    "id": "{C9221BB6-D7C9-E1FB-6CF7-AF8C734B421E}",
+    "name": "ArchFilter",
+    "type": 3,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VMAF",
+    "url": "https://github.com/T0M24/IPS_Module/Variablemanager/ArchFilter"
+}

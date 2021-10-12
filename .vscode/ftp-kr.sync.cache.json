@@ -1,0 +1,225 @@
+{
+  "ftp://192.168.0.5@ftp_docker_deployer": {
+    "docker": {
+      "symcon": {
+        "var_lib_symcon": {
+          "modules": {
+            ".store": {},
+            "Control": {
+              "CTRL_PID": {
+                "README.md": {
+                  "type": "-",
+                  "size": 92,
+                  "lmtime": 1632812241959,
+                  "modified": false
+                },
+                "form.json": {
+                  "type": "-",
+                  "size": 814,
+                  "lmtime": 1632836563328,
+                  "modified": false
+                },
+                "locale.json": {
+                  "type": "-",
+                  "size": 309,
+                  "lmtime": 1632836543847,
+                  "modified": false
+                },
+                "module.json": {
+                  "type": "-",
+                  "size": 283,
+                  "lmtime": 1632836682772,
+                  "modified": false
+                },
+                "module.php": {
+                  "type": "-",
+                  "size": 6631,
+                  "lmtime": 1632836872669,
+                  "modified": false
+                }
+              },
+              "CTRL_PT1": {
+                "README.md": {
+                  "type": "-",
+                  "size": 108,
+                  "lmtime": 1632812241961,
+                  "modified": false
+                },
+                "form.json": {
+                  "type": "-",
+                  "size": 749,
+                  "lmtime": 1632812241961,
+                  "modified": false
+                },
+                "locale.json": {
+                  "type": "-",
+                  "size": 222,
+                  "lmtime": 1632812241961,
+                  "modified": false
+                },
+                "module.json": {
+                  "type": "-",
+                  "size": 297,
+                  "lmtime": 1632812241962,
+                  "modified": false
+                },
+                "module.php": {
+                  "type": "-",
+                  "size": 5536,
+                  "lmtime": 1632856683697,
+                  "modified": false
+                }
+              },
+              "README.md": {
+                "type": "-",
+                "size": 168,
+                "lmtime": 1632836050083,
+                "modified": false
+              },
+              "library.json": {
+                "type": "-",
+                "size": 260,
+                "lmtime": 1632836040231,
+                "modified": false
+              }
+            },
+            "SymconTest": {},
+            "VariableManager": {
+              "ArchFilter": {
+                "README.md": {
+                  "type": "-",
+                  "size": 1665,
+                  "lmtime": 1632839981564,
+                  "modified": false
+                },
+                "form.json": {
+                  "type": "-",
+                  "size": 512,
+                  "lmtime": 1632860706391,
+                  "modified": false
+                },
+                "locale.json": {
+                  "type": "-",
+                  "size": 161,
+                  "lmtime": 1632859245292,
+                  "modified": false
+                },
+                "module.json": {
+                  "type": "-",
+                  "size": 313,
+                  "lmtime": 1632859248301,
+                  "modified": false
+                },
+                "module.php": {
+                  "type": "-",
+                  "size": 2576,
+                  "lmtime": 1632907659724,
+                  "modified": false
+                }
+              },
+              "LimitMonitor": {
+                "README.md": {
+                  "type": "-",
+                  "size": 1661,
+                  "lmtime": 1632839981632,
+                  "modified": false
+                },
+                "form.json": {
+                  "type": "-",
+                  "size": 59,
+                  "lmtime": 1632839981619,
+                  "modified": false
+                },
+                "locale.json": {
+                  "type": "-",
+                  "size": 150,
+                  "lmtime": 1632839981608,
+                  "modified": false
+                },
+                "module.json": {
+                  "type": "-",
+                  "size": 318,
+                  "lmtime": 1632839981596,
+                  "modified": false
+                },
+                "module.php": {
+                  "type": "-",
+                  "size": 346,
+                  "lmtime": 1632839981644,
+                  "modified": false
+                }
+              },
+              "README.md": {
+                "type": "-",
+                "size": 245,
+                "lmtime": 1632856449585,
+                "modified": false
+              },
+              "library.json": {
+                "type": "-",
+                "size": 282,
+                "lmtime": 1632839981661,
+                "modified": false
+              }
+            },
+            "VariableMonitor": {
+              "library.json": {
+                "type": "-",
+                "size": 262,
+                "lmtime": 1632856449586,
+                "modified": false
+              }
+            },
+            "Versionspruefung": {
+              "Versionspruefung": {
+                "form.json": {
+                  "type": "-",
+                  "size": 474,
+                  "lmtime": 1632830487119,
+                  "modified": false
+                },
+                "locale.json": {
+                  "type": "-",
+                  "size": 310,
+                  "lmtime": 1632834012069,
+                  "modified": false
+                },
+                "module.json": {
+                  "type": "-",
+                  "size": 345,
+                  "lmtime": 0,
+                  "modified": false
+                },
+                "module.php": {
+                  "type": "-",
+                  "size": 2529,
+                  "lmtime": 1632835301759,
+                  "modified": false
+                }
+              },
+              "Versionsprüfung.code-workspace": {
+                "type": "-",
+                "size": 61,
+                "lmtime": 1632828656756,
+                "modified": false
+              },
+              "library.json": {
+                "type": "-",
+                "size": 263,
+                "lmtime": 1632829102675,
+                "modified": false
+              }
+            },
+            "library.json": {
+              "type": "-",
+              "size": 288,
+              "lmtime": 1632839861287,
+              "modified": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "$version": 1
+}

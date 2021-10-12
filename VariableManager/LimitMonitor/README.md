@@ -1,4 +1,4 @@
-# VarMon
+# LimitMonitor
 Beschreibung des Moduls.
 
 ### Inhaltsverzeichnis
@@ -17,16 +17,16 @@ Beschreibung des Moduls.
 
 ### 2. Vorraussetzungen
 
-- IP-Symcon ab Version 5.5
+- IP-Symcon ab Version 5.0
 
 ### 3. Software-Installation
 
-* Über den Module Store das 'VarMon'-Modul installieren.
+* Über den Module Store das 'LimitMonitor'-Modul installieren.
 * Alternativ über das Module Control folgende URL hinzufügen
 
 ### 4. Einrichten der Instanzen in IP-Symcon
 
- Unter 'Instanz hinzufügen' kann das 'VarMon'-Modul mithilfe des Schnellfilters gefunden werden.  
+ Unter 'Instanz hinzufügen' kann das 'LimitMonitor'-Modul mithilfe des Schnellfilters gefunden werden.  
 	- Weitere Informationen zum Hinzufügen von Instanzen in der [Dokumentation der Instanzen](https://www.symcon.de/service/dokumentation/konzepte/instanzen/#Instanz_hinzufügen)
 
 __Konfigurationsseite__:
@@ -60,8 +60,8 @@ Die Funktionalität, die das Modul im WebFront bietet.
 
 ### 7. PHP-Befehlsreferenz
 
-`boolean VARMON_BeispielFunktion(integer $InstanzID);`
+`boolean VMLIM_BeispielFunktion(integer $InstanzID);`
 Erklärung der Funktion.
 
 Beispiel:
-`VARMON_BeispielFunktion(12345);`
+`VMLIM_BeispielFunktion(12345);`
