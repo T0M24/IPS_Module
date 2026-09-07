@@ -1,0 +1,23 @@
+{
+    "elements": [
+        {
+            "type": "NumberSpinner",
+            "name": "UpdateIntervall",
+            "caption":"Updateinterval",
+            "suffix":"hours"
+
+        }
+    ],
+    "actions":[
+        {
+            "type":"Label",
+            "name":"UpdateLabel",
+            "caption":""
+        },
+        {
+            "type":"Button",
+            "caption":"Update",
+            "onClick":"VP_UpdateVersion($id);"
+        }
+    ]
+}

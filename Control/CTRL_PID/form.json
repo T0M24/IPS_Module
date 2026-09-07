@@ -1,0 +1,23 @@
+{
+    "elements":
+    [
+        { "type": "NumberSpinner", "name": "KP", "caption": "KP", "digits": 3},
+        { "type": "NumberSpinner", "name": "KI", "caption": "KI", "digits": 3},
+        { "type": "NumberSpinner", "name": "KD", "caption": "KD", "digits": 3},
+        
+        { "type": "IntervalBox", "name": "cycle_time", "caption": "ms" }
+       
+
+        
+    ],
+    "actions":
+    [
+        { "type": "Button", "label": "Set Active", "onClick": "CTRLPID_SetEnable($id,true);" },
+        { "type": "Button", "label": "Deactivate", "onClick": "CTRLPID_SetEnable($id,false);" }
+    ],
+    "status":
+    [
+        { "code": 102, "icon": "active", "caption": "controller is active" },
+        { "code": 201, "icon": "inactive", "caption": "attention to contraints (0,2-3600s)" }
+    ]
+}

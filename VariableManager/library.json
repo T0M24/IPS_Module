@@ -1,8 +1,8 @@
 {
     "id": "{3FBA6972-E8D2-EF54-96C2-DFAACFD9A660}",
-    "name": "Variablemanagement",
+    "name": "Variablemanager",
     "author": "Tom24",
-    "url": "https://github.com/T0M24/IPS_Module/VariableManagement",
+    "url": "https://github.com/T0M24/IPS_Module/Variablemanager",
     "compatibility": {
         "version": "5.0"
     },

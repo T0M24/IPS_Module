@@ -1,0 +1,12 @@
+{
+    "id": "{1C84FD28-799F-B8F6-ADE8-12DC2455A1A3}",
+    "name": "LimitMonitor",
+    "type": 3,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VMLIM",
+    "url": "https://github.com/T0M24/IPS_Module/Variablemanager/LimitMonitor"
+}
