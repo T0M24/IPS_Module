@@ -1,0 +1,18 @@
+{
+    "translations": {
+        "de": {
+            "Greeting": "Gruß",
+            "Name": "Name",
+            "Interval": "Intervall",
+            "seconds": "Sekunden",
+            "Say hello": "Hallo sagen",
+            "Reset counter": "Zähler zurücksetzen",
+            "Message": "Nachricht",
+            "Counter": "Zähler",
+            "Active": "Aktiv",
+            "Module is active": "Modul ist aktiv",
+            "Module is inactive": "Modul ist inaktiv",
+            "Invalid Ident: %s": "Ungültiger Ident: %s"
+        }
+    }
+}

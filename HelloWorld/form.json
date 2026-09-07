@@ -1,0 +1,45 @@
+{
+    "elements": [
+        {
+            "type": "ValidationTextBox",
+            "name": "Greeting",
+            "caption": "Greeting"
+        },
+        {
+            "type": "ValidationTextBox",
+            "name": "Name",
+            "caption": "Name"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "Interval",
+            "caption": "Interval",
+            "suffix": "seconds",
+            "minimum": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "Button",
+            "caption": "Say hello",
+            "onClick": "echo HW_SayHello($id);"
+        },
+        {
+            "type": "Button",
+            "caption": "Reset counter",
+            "onClick": "HW_ResetCounter($id);"
+        }
+    ],
+    "status": [
+        {
+            "code": 102,
+            "icon": "active",
+            "caption": "Module is active"
+        },
+        {
+            "code": 104,
+            "icon": "inactive",
+            "caption": "Module is inactive"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "id": "{777B6DF4-FAF4-4265-827B-57C97E316DD7}",
+    "name": "Hello World",
+    "type": 3,
+    "vendor": "T0M24",
+    "aliases": [],
+    "url": "https://github.com/T0M24/IPS_Module",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "HW"
+}
